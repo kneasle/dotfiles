@@ -1,0 +1,7 @@
+[build]
+target-dir = ".build/rust"
+
+[cargo-new]
+name = "Ben White-Horne"
+email = "kneasle@gmail.com"
+vcs = "git"

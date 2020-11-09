@@ -1,0 +1,36 @@
+window:
+    padding:
+        x: 5
+        y: 5
+    dynamic_padding: true
+
+font:
+    size: 10.0
+
+background_opacity: 0.0
+
+colors:
+    normal:
+        black: '#000000'
+        red: '#aa0000'
+        green: '#00aa00'
+        yellow: '#aaaa00'
+        blue: '#5555ff'
+        magenta: '#aa00aa'
+        cyan: '#00cccc'
+        white: '#bbbbbb'
+
+    bright:
+        black: '#777777'
+        red: '#ff0000'
+        green: '#00ff00'
+        yellow: '#ffff00'
+        blue: '#0099ff'
+        magenta: '#ff00ff'
+        cyan: '#00ffff'
+        white: '#ffffff'
+
+draw_bold_text_with_bright_colors: true
+
+shell:
+    program: /usr/bin/fish

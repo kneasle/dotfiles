@@ -1,0 +1,13 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[user]
+	name = Kneasle
+	email = kneasle@gmail.com
+[core]
+	editor = vim
+[alias]
+	st = status
+	graph = log --oneline --decorate --all --graph
