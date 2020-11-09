@@ -7,7 +7,7 @@ window:
 font:
     size: 10.0
 
-background_opacity: 0.0
+background_opacity: 0.95
 
 colors:
     normal:
