@@ -1,4 +1,5 @@
-inoremap <C-B> <C-X><C-O>
+" Map 'jj' to '\' for when typing latex
+inoremap jj \
 
 let mapleader = " "
 set showcmd
