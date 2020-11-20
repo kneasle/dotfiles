@@ -11,3 +11,5 @@
 [alias]
 	st = status
 	graph = log --oneline --decorate --all --graph
+	br = branch
+	co = checkout
