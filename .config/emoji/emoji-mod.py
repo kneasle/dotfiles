@@ -118,5 +118,3 @@ for (lower_case_letter, column_overwrite_values) in column_overwrite_map.items()
 
     # Build the columns into a full xmodmap command string
     print(f"keysym {lower_case_letter} = {' '.join(new_columns)}")
-
-    # Output the command to bind the keys
