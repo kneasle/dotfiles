@@ -10,5 +10,8 @@ end
 # Alias for generating random passwords
 alias new_pwd="pwgen -cys 16 5 -C1"
 
+# Alias for copying and pasting
+alias xclip="xclip -selection c"
+
 # Load environment vars for project directories
 source ~/documents/dirs.fish
