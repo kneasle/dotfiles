@@ -8,7 +8,7 @@ function mcd
 end
 
 # Alias for generating random passwords
-alias new_pwd="pwgen -Ays 16 5 -C1"
+alias new_pwd="pwgen -cys 16 5 -C1"
 
 # Load environment vars for project directories
 source ~/documents/dirs.fish
