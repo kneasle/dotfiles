@@ -10,20 +10,15 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-" Show (absolute) line numbers
+" Show (absolute) line numbers, but disable the sign column so it doesn't move my text left and
+" right all the time
 set number
-" Always show the sign column so that when I'm using LSP clients, it doesn't
-" keep appearing and dissapearing
-set signcolumn=yes
+set signcolumn=no
 
 set hidden
 
 " Don't hightlight everything after I use search to jump around
 set nohlsearch
-
-" Use a nice default colour scheme, and force true colour
-colo evening
-set termguicolors
 
 " ==== COC ====
 " Goto
@@ -47,13 +42,17 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-" Tweaks to the colour scheme to make Coc work better
+" ======== COLOURS ========
 
-" Dropdown menu should be dark grey, with a cyan highlight over the selected
-" element
+" Use a nice default colour scheme, and force true colour
+colo evening
+set termguicolors
+
+" Dropdown menu should be dark grey, with a cyan highlight over the selected element
 hi Pmenu ctermbg=DarkGrey ctermfg=White guibg=#555555 guifg=#ffffff
 hi PmenuSel ctermbg=LightBlue ctermfg=Black cterm=italic guibg=#00ccff guifg=#000000 gui=italic 
 
+" Hints should be light blue, info should be green, warnings yellow and errors red
 hi CocHintFloat ctermfg=LightBlue cterm=bold guifg=#00ccff gui=bold
 hi CocHintSign ctermfg=LightBlue cterm=italic guifg=#55aacc gui=italic
 
@@ -65,6 +64,10 @@ hi CocWarningSign ctermfg=Yellow cterm=italic,bold guifg=#ffff00 gui=italic,bold
 
 hi CocErrorFloat ctermfg=Red cterm=bold guifg=#ff0000 gui=bold
 hi CocErrorSign ctermfg=Red cterm=italic,bold guifg=#ff0000 gui=italic,bold
+
+" To make the coc-hints easy to spot without using the sign column set the line numbers to be
+" darkish steely grey
+hi LineNr ctermfg=grey ctermbg=NONE cterm=NONE guifg=#666699 gui=NONE guibg=NONE
 
 " Force transparent background
 hi Normal ctermbg=None guibg=None
