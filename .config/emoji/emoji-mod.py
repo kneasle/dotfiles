@@ -9,12 +9,14 @@ import sys
 # -> mapping from any-letters to emoji chars
 
 emoji_map = {}
+
 # Read the config file into emoji_map
 for i, line in enumerate(open(sys.argv[1]).read().split("\n")):
-    l = line.strip()
+    # Remove comments and strip whitespace
+    l = line.split("#")[0].strip()
 
-    # Early return if the line is empty or begins with '#'
-    if l == "" or l.startswith("#"):
+    # Early return if the line is empty
+    if l == "":
         continue
     if l[1] != ":":
         print(f"Line #{i} ({l}) doesn't have a ':' as the 2nd char")
@@ -24,7 +26,8 @@ for i, line in enumerate(open(sys.argv[1]).read().split("\n")):
 
     # Only one emoji - map it to exactly the same case
     if len(l) == 3:
-        emoji_map[base_char] = l[2]
+        emoji_map[base_char.lower()] = l[2]
+        emoji_map[base_char.upper()] = l[2]
     if len(l) == 4:
         emoji_map[base_char.lower()] = l[2]
         emoji_map[base_char.upper()] = l[3]
