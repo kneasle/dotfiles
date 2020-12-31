@@ -15,6 +15,10 @@ set expandtab
 set number
 set signcolumn=no
 
+" Line breaking settings
+set linebreak
+set textwidth=100
+
 set hidden
 
 " Don't hightlight everything after I use search to jump around
