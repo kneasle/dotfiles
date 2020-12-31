@@ -13,4 +13,4 @@
 	graph = log --oneline --decorate --all --graph
 	br = branch
 	co = checkout
-	gr = graph
+	gr = log --oneline --decorate --all --graph
