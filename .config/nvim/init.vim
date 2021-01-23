@@ -73,6 +73,9 @@ hi CocErrorSign ctermfg=Red cterm=italic,bold guifg=#ff0000 gui=italic,bold
 " darkish steely grey
 hi LineNr ctermfg=grey ctermbg=NONE cterm=NONE guifg=#666699 gui=NONE guibg=NONE
 
+" Folded lines are italic, lime on dark grey
+hi Folded guifg=#00ff00 guibg=#444444 gui=italic
+
 " Force transparent background
 hi Normal ctermbg=None guibg=None
 hi NonText ctermfg=None guibg=None
