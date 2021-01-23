@@ -8,7 +8,7 @@ function mcd
 end
 
 # Alias for generating random passwords
-alias new_pwd="pwgen -cys 16 5 -C1"
+alias new-pwd="pwgen -cys 16 5 -C1"
 
 # Alias for copying and pasting
 alias xclip="xclip -selection c"
