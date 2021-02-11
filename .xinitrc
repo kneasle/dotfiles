@@ -51,4 +51,5 @@ fi
 
 nitrogen --restore &
 picom &
+polybar header &
 exec herbstluftwm
