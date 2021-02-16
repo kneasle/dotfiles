@@ -13,4 +13,5 @@
 	graph = log --oneline --decorate --all --graph
 	br = branch
 	co = checkout
-	gr = log --oneline --decorate --all --graph
+    gr = log --oneline --decorate --all --graph
+    root = rev-parse --show-toplevel
