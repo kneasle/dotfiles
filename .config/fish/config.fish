@@ -1,4 +1,5 @@
 set PATH ~/bin/node-v12.18.2-linux-x64/bin ~/complib-build /usr/lib/dart/bin ~/bin/dart-sass $PATH
+set PATH ~/.local/bin/ $PATH
 
 # ===== FUNCTIONS AND ALIASES =====
 # Shorthand to make and move into a directory
