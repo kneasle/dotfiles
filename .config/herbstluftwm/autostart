@@ -21,10 +21,25 @@ Mod=Mod4   # Use the super key as the main modifier
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
+
+# Audio
+hc keybind $Mod-minus spawn pactl set-sink-volume @DEFAULT_SINK@ -10%
+hc keybind $Mod-equal spawn pactl set-sink-volume @DEFAULT_SINK@ +10%
+hc keybind $Mod-Shift-minus spawn pactl set-sink-volume @DEFAULT_SINK@ -2%
+hc keybind $Mod-Shift-equal spawn pactl set-sink-volume @DEFAULT_SINK@ +2%
+
+# Spawn apps
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-b spawn firefox
 hc keybind $Mod-g spawn steam
 hc keybind $Mod-Shift-m spawn minecraft-launcher
+hc keybind $Mod-v spawn pavucontrol
+
+# Screenshot utils
+mkdir -p $HOME/documents/pictures/screenshots
+hc keybind Print spawn scrot $HOME/documents/pictures/screenshots/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
+hc keybind $Mod-Print spawn scrot --focused $HOME/documents/pictures/screenshots/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
+hc keybind Shift-Print spawn scrot --select $HOME/documents/pictures/screenshots/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -141,12 +156,6 @@ hc set frame_padding 0
 hc set smart_window_surroundings off
 hc set smart_frame_surroundings on
 hc set mouse_recenter_gap 0
-
-# Screenshot utils
-mkdir -p $HOME/documents/pictures/screenshots
-hc keybind Print spawn scrot $HOME/documents/pictures/screenshots/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
-hc keybind $Mod-Print spawn scrot --focused $HOME/documents/pictures/screenshots/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
-hc keybind Shift-Print spawn scrot --select $HOME/documents/pictures/screenshots/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
 
 # rules
 hc unrule -F
