@@ -36,10 +36,11 @@ hc keybind $Mod-Shift-m spawn minecraft-launcher
 hc keybind $Mod-v spawn pavucontrol
 
 # Screenshot utils
-mkdir -p $HOME/documents/pictures/screenshots
-hc keybind Print spawn scrot $HOME/documents/pictures/screenshots/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
-hc keybind $Mod-Print spawn scrot --focused $HOME/documents/pictures/screenshots/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
-hc keybind Shift-Print spawn scrot --select $HOME/documents/pictures/screenshots/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
+SS=$HOME/documents/pictures/screenshots/misc
+mkdir -p $SS
+hc keybind Print spawn scrot $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
+hc keybind $Mod-Print spawn scrot --focused $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
+hc keybind Shift-Print spawn scrot --select $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
 
 # basic movement in tiling and floating mode
 # focusing clients
