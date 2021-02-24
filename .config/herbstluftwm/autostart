@@ -23,10 +23,10 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 
 # Audio
-hc keybind $Mod-minus spawn pactl set-sink-volume @DEFAULT_SINK@ -10%
-hc keybind $Mod-equal spawn pactl set-sink-volume @DEFAULT_SINK@ +10%
 hc keybind $Mod-Shift-minus spawn pactl set-sink-volume @DEFAULT_SINK@ -2%
 hc keybind $Mod-Shift-equal spawn pactl set-sink-volume @DEFAULT_SINK@ +2%
+hc keybind $Mod-minus       spawn pactl set-sink-volume @DEFAULT_SINK@ -10%
+hc keybind $Mod-equal       spawn pactl set-sink-volume @DEFAULT_SINK@ +10%
 
 # Spawn apps
 hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
@@ -99,11 +99,11 @@ hc keybind $Mod-period use_index +1 --skip-visible
 hc keybind $Mod-comma  use_index -1 --skip-visible
 
 # layouting
-hc keybind $Mod-m remove
-hc keybind $Mod-s floating toggle
-hc keybind $Mod-f fullscreen toggle
+hc keybind $Mod-m       remove
+hc keybind $Mod-Shift-s floating toggle
+hc keybind $Mod-f       fullscreen toggle
 hc keybind $Mod-Shift-f set_attr clients.focus.floating toggle
-hc keybind $Mod-p pseudotile toggle
+hc keybind $Mod-p       pseudotile toggle
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
