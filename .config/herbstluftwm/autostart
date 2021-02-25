@@ -28,12 +28,18 @@ hc keybind $Mod-Shift-equal spawn pactl set-sink-volume @DEFAULT_SINK@ +2%
 hc keybind $Mod-minus       spawn pactl set-sink-volume @DEFAULT_SINK@ -10%
 hc keybind $Mod-equal       spawn pactl set-sink-volume @DEFAULT_SINK@ +10%
 
+# Music
+hc keybind $Mod-space       spawn spotifyctl playpause
+hc keybind $Mod-p           spawn spotifyctl previous
+hc keybind $Mod-n           spawn spotifyctl next
+
 # Spawn apps
 hc keybind $Mod-Return  spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-b       spawn firefox
 hc keybind $Mod-g       spawn steam
 hc keybind $Mod-Shift-m spawn minecraft-launcher
 hc keybind $Mod-v       spawn pavucontrol
+hc keybind $Mod-s       spawn spotify
 
 # Screenshot utils
 SS=$HOME/documents/pictures/screenshots/misc
@@ -108,7 +114,7 @@ hc keybind $Mod-Shift-p pseudotile toggle
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
-hc keybind $Mod-space                                                           \
+hc keybind $Mod-Shift-space                                                     \
             or , and . compare tags.focus.curframe_wcount = 2                   \
                      . cycle_layout +1 vertical horizontal max vertical grid    \
                , cycle_layout +1
