@@ -29,18 +29,18 @@ hc keybind $Mod-minus       spawn pactl set-sink-volume @DEFAULT_SINK@ -10%
 hc keybind $Mod-equal       spawn pactl set-sink-volume @DEFAULT_SINK@ +10%
 
 # Spawn apps
-hc keybind $Mod-Return spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
-hc keybind $Mod-b spawn firefox
-hc keybind $Mod-g spawn steam
+hc keybind $Mod-Return  spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
+hc keybind $Mod-b       spawn firefox
+hc keybind $Mod-g       spawn steam
 hc keybind $Mod-Shift-m spawn minecraft-launcher
-hc keybind $Mod-v spawn pavucontrol
+hc keybind $Mod-v       spawn pavucontrol
 
 # Screenshot utils
 SS=$HOME/documents/pictures/screenshots/misc
 mkdir -p $SS
-hc keybind Print spawn scrot $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
-hc keybind $Mod-Print spawn scrot --focused $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
-hc keybind Shift-Print spawn scrot --select $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
+hc keybind Print        spawn scrot $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
+hc keybind $Mod-Print   spawn scrot --focused $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
+hc keybind Shift-Print  spawn scrot --select $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -104,7 +104,7 @@ hc keybind $Mod-m       remove
 hc keybind $Mod-Shift-s floating toggle
 hc keybind $Mod-f       fullscreen toggle
 hc keybind $Mod-Shift-f set_attr clients.focus.floating toggle
-hc keybind $Mod-p       pseudotile toggle
+hc keybind $Mod-Shift-p pseudotile toggle
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
