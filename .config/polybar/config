@@ -161,7 +161,7 @@ format-disconnected = ???
 type = internal/date
 interval = 1
 
-date = %a %m %b
+date = %a %d %b
 time = %H:%M:%S
 
 label = %date% %time%
