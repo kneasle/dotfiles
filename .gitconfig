@@ -17,4 +17,4 @@
     root = rev-parse --show-toplevel
     unstage = reset HEAD --
     push-new = push -u origin HEAD
-	tip = log -1 HEAD
+	tip = log --oneline --decorate --all --graph -n 10
