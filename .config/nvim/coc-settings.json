@@ -1,4 +1,5 @@
 {
     "coc.preferences.formatOnSaveFiletypes": ["rust"],
-    "latex.build.onSave": true
+    "latex.build.onSave": true,
+    "python.jediEnabled": false
 }
