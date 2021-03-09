@@ -19,3 +19,4 @@
     push-new = push -u origin HEAD
 	tip = log --oneline --decorate --all --graph -n 10
 	am = commit --amend
+	cm = commit -m
