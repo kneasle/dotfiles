@@ -51,5 +51,5 @@ fi
 
 nitrogen --restore &
 picom &
-polybar header &
+# HLWM will spawn polybar
 exec herbstluftwm
