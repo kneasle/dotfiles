@@ -22,9 +22,9 @@ hc keyunbind --all
 #Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
+hc keybind $Mod-Shift-c close
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
-hc keybind $Mod-Shift-c close
 
 # Audio
 hc keybind $Mod-Shift-minus spawn pactl set-sink-volume @DEFAULT_SINK@ -2%
@@ -38,12 +38,15 @@ hc keybind $Mod-p           spawn spotifyctl previous
 hc keybind $Mod-n           spawn spotifyctl next
 
 # Spawn apps
-hc keybind $Mod-Return  spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with xterm as fallback
-hc keybind $Mod-b       spawn firefox
-hc keybind $Mod-g       spawn steam
+hc keybind $Mod-Return  spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with alacritty as fallback
+hc keybind $Mod-Shift-a spawn pavucontrol
+hc keybind $Mod-Shift-b spawn firefox
+hc keybind $Mod-Shift-g spawn steam
 hc keybind $Mod-Shift-m spawn minecraft-launcher
-hc keybind $Mod-v       spawn pavucontrol
-hc keybind $Mod-s       spawn spotify
+hc keybind $Mod-Shift-o spawn obs
+hc keybind $Mod-Shift-s spawn spotify
+hc keybind $Mod-Shift-t spawn teams
+hc keybind $Mod-Shift-v spawn vivaldi-stable
 
 # Screenshot utils
 SS=$HOME/documents/pictures/screenshots/misc
@@ -111,7 +114,7 @@ hc keybind $Mod-comma  use_index -1 --skip-visible
 
 # layouting
 hc keybind $Mod-m       remove
-hc keybind $Mod-Shift-s floating toggle
+hc keybind $Mod-s       floating toggle
 hc keybind $Mod-f       fullscreen toggle
 hc keybind $Mod-Shift-f set_attr clients.focus.floating toggle
 hc keybind $Mod-Shift-p pseudotile toggle
