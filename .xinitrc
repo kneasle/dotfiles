@@ -15,6 +15,10 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
+# Make sure that my webcam always focusses on me
+v4l2-ctl -c focus_auto=0
+v4l2-ctl -c focus_absolute=10
+
 # Keyboard layout commands
 setxkbmap -layout gb
 setxkbmap -option caps:escape
