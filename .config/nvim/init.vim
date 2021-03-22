@@ -37,6 +37,14 @@ nmap <leader>rn <Plug>(coc-rename)
 " Formatting
 nmap <leader>f  <Plug>(coc-format)
 
+" Code actions
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Move between diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
 command! -nargs=0 Format :call CocAction('format')
 
 " Packages
