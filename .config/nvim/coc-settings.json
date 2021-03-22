@@ -1,5 +1,7 @@
 {
     "coc.preferences.formatOnSaveFiletypes": ["rust", "javascript"],
+    "prettier.printWidth": 100,
+    "prettier.tabWidth": 4,
     "latex.build.onSave": true,
     "python.jediEnabled": false
 }
