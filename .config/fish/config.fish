@@ -16,6 +16,11 @@ function clippy
     cargo clippy
 end
 
+# Function which searches for merge conflict markers
+function merge-conf
+    rg "^(<<<<<<<|>>>>>>>|=======)"
+end
+
 # Alias for generating random passwords
 alias new-pwd="pwgen -cys 16 5 -C1"
 
