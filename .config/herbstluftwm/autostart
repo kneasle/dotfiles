@@ -44,6 +44,7 @@ hc keybind $Mod-Shift-b spawn firefox
 hc keybind $Mod-Shift-d spawn discord
 hc keybind $Mod-Shift-g spawn steam
 hc keybind $Mod-Shift-m spawn minecraft-launcher
+hc keybind $Mod-Shift-n spawn nemo
 hc keybind $Mod-Shift-o spawn obs
 hc keybind $Mod-Shift-s spawn spotify
 hc keybind $Mod-Shift-t spawn teams
