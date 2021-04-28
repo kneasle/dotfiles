@@ -1,5 +1,5 @@
 {
-    "coc.preferences.formatOnSaveFiletypes": ["rust", "javascript"],
+    "coc.preferences.formatOnSaveFiletypes": ["rust", "javascript", "css", "html", "python"],
     "prettier.printWidth": 100,
     "prettier.tabWidth": 4,
     "latex.build.onSave": true,
