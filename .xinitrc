@@ -20,8 +20,9 @@ v4l2-ctl -c focus_auto=0
 v4l2-ctl -c focus_absolute=10
 
 # Keyboard layout commands
-setxkbmap -layout gb
-setxkbmap -option caps:escape
+# setxkbmap -layout gb
+# setxkbmap -option caps:escape
+test -f ~/.Xkeymap && xkbcomp ~/.Xkeymap $DISPLAY
 
 # Set terminal to alacritty
 export $TERMINAL=alacritty
