@@ -15,13 +15,16 @@ set expandtab
 set number
 set signcolumn=no
 
-" Line breaking settings
+" Break lines automatically at 100 chars
 set linebreak
 set textwidth=100
 
+" Enable spell checking by default
+set spell
+
 set hidden
 
-" Don't hightlight everything after I use search to jump around
+" Don't highlight everything after I use search to jump around
 set nohlsearch
 
 " ==== COC ====
