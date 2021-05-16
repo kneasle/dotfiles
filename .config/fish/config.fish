@@ -1,6 +1,8 @@
 set PATH ~/bin/node-v12.18.2-linux-x64/bin ~/complib-build /usr/lib/dart/bin ~/bin/dart-sass $PATH
 set PATH ~/.local/bin/ $PATH
 
+set RUSTFLAGS "-C target-cpu=native"
+
 # ===== FUNCTIONS AND ALIASES =====
 # Shorthand to make and move into a directory
 function mcd 
@@ -19,6 +21,11 @@ end
 # Function which searches for merge conflict markers
 function merge-conf
     rg "^(<<<<<<<|>>>>>>>|=======)"
+end
+
+# Function for word counting LaTeX files
+function texwc
+    detex $argv | sed "s/[^a-zA-Z ]//g" | wc -w
 end
 
 # Alias for generating random passwords
