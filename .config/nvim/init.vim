@@ -27,6 +27,12 @@ set hidden
 " Don't highlight everything after I use search to jump around
 set nohlsearch
 
+" ==== AndrewRadev plugins ====
+nnoremap <silent> <c-h> :SidewaysLeft<cr>
+nnoremap <silent> <c-l> :SidewaysRight<cr>
+nnoremap <silent> <c-k> :SidewaysJumpLeft<cr>
+nnoremap <silent> <c-j> :SidewaysJumpRight<cr>
+
 " ==== COC ====
 " Goto
 nmap <silent> gd <Plug>(coc-definition)
@@ -55,6 +61,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'cespare/vim-toml'
+Plug 'AndrewRadev/sideways.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 
 call plug#end()
 
