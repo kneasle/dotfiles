@@ -6,7 +6,7 @@ set RUSTFLAGS "-C target-cpu=native"
 # ===== FUNCTIONS AND ALIASES =====
 # Shorthand to make and move into a directory
 function mcd 
-    mkdir $argv
+    mkdir -p $argv
     cd $argv
 end
 
