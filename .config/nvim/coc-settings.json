@@ -1,5 +1,6 @@
 {
     "coc.preferences.formatOnSaveFiletypes": ["rust", "javascript", "css", "html", "python"],
+    "rust-analyzer.rustcSource": "discover",
     "prettier.printWidth": 100,
     "prettier.tabWidth": 4,
     "latex.build.onSave": true,
