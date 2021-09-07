@@ -10,14 +10,6 @@ function mcd
     cd $argv
 end
 
-# Function to run clippy properly (cos clippy is broken;
-# see https://github.com/rust-lang/rust-clippy/issues/4612)
-function clippy
-    find . -wholename '**/lib.rs' | xargs touch
-    find . -wholename '**/main.rs' | xargs touch
-    cargo clippy
-end
-
 # Function which searches for merge conflict markers
 function merge-conf
     rg "^(<<<<<<<|>>>>>>>|=======)"
