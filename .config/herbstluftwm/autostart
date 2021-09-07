@@ -42,6 +42,7 @@ hc keybind $Mod-Return  spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with
 hc keybind $Mod-Shift-a spawn pavucontrol
 hc keybind $Mod-Shift-b spawn firefox
 hc keybind $Mod-Shift-d spawn discord
+hc keybind $Mod-Shift-e spawn godot
 hc keybind $Mod-Shift-g spawn steam
 hc keybind $Mod-Shift-m spawn minecraft-launcher
 hc keybind $Mod-Shift-n spawn nemo
@@ -127,6 +128,16 @@ hc keybind $Mod-Shift-space                                                     
             or , and . compare tags.focus.curframe_wcount = 2                   \
                      . cycle_layout +1 vertical horizontal max vertical grid    \
                , cycle_layout +1
+
+# unminimise
+hc keybind $Mod-Ctrl-m \
+   substitute FOCUS "tags.focus.name" \
+   foreach CLIENT clients. \
+     sprintf MINATT "%c.minimized" CLIENT \
+     sprintf TAGATT "%c.tag" CLIENT and \
+       , compare MINATT "=" "true" \
+       , compare TAGATT "=" FOCUS \
+       , set_attr MINATT false
 
 # mouse
 hc mouseunbind --all
