@@ -33,7 +33,7 @@ nnoremap <silent> <c-l> :SidewaysRight<cr>
 nnoremap <silent> <c-k> :SidewaysJumpLeft<cr>
 nnoremap <silent> <c-j> :SidewaysJumpRight<cr>
 
-" ==== COC ====
+" ==== CoC ====
 " Goto
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
