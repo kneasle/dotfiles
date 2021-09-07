@@ -21,6 +21,7 @@ v4l2-ctl -c focus_absolute=10
 
 # Keyboard layout commands
 setxkbmap -layout gb -option caps:escape
+xmodmap -e "keycode 9 = grave" # Remap escape to backtick on my PC (which has no key for `)
 
 # Set terminal to alacritty
 export $TERMINAL=alacritty
