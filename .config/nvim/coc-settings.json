@@ -3,6 +3,7 @@
     "rust-analyzer.rustcSource": "discover",
     "prettier.printWidth": 100,
     "prettier.tabWidth": 4,
+    "prettier.endOfLine": "lf",
     "latex.build.onSave": true,
     "python.formatting.provider": "black",
 }
