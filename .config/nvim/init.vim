@@ -23,6 +23,7 @@ set textwidth=100
 set spell
 
 set hidden
+set nocompatible
 
 " Don't highlight everything after I use search to jump around
 set nohlsearch
@@ -63,14 +64,8 @@ let g:plug_url_format = "https://github.com/%s.git"
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'cespare/vim-toml'
-Plug 'rust-lang/rust.vim'
 Plug 'AndrewRadev/sideways.vim'
-Plug 'AndrewRadev/splitjoin.vim'
-
-Plug 'zigland/zig.vim'
-Plug 'ollykel/v-vim'
-Plug 'jdonaldson/vaxe'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
