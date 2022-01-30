@@ -1,5 +1,5 @@
-" Map 'jj' to '\' for when typing latex
-inoremap jj \
+" Map 'jl' to '\' for when typing latex
+inoremap jl \
 
 let mapleader = " "
 set showcmd
