@@ -22,6 +22,8 @@ v4l2-ctl -c focus_absolute=10
 # Keyboard layout commands
 setxkbmap -layout gb -option caps:escape
 xmodmap -e "keycode 9 = grave" # Remap escape to backtick on my PC (which has no key for `)
+xmodmap -e "keysym Shift_R = Mode_switch" # Make right shift into an extra modifier
+.config/emoji/emoji-mod.py .config/emoji/emoji.conf | xmodmap - # Bind emoji keys
 
 # Set terminal to alacritty
 export $TERMINAL=alacritty

@@ -78,7 +78,7 @@ key_map_columns = {}
 
 import subprocess
 import sys
- 
+
 def get_stdout(cmd):
     """ Reads stdout of running a command. """
     proc = subprocess.Popen(cmd,
@@ -95,7 +95,7 @@ for line in get_stdout(["xmodmap", "-pke"]).decode('utf-8').split('\n'):
     # Otherwise, we take the contents of the right hand side, strip it and split by space
     # This gives us the columns as xmodmap expects them
     cols = line.split("=")[1].strip().split(' ')
-    
+
     # If the cols have a single char as their first column, then they must correspond to a
     # letter (or a number), so we add it to key_map_columns under its first column
     if cols != [] and len(cols[0]) == 1:
