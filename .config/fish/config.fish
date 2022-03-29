@@ -24,7 +24,7 @@ end
 alias new-pwd="pwgen -cys 16 5 -C1"
 
 # Alias for copying and pasting
-alias xclip="xclip -selection c"
+alias copy="xclip -selection c"
 
 # Alias for handling herbstlustwm
 alias hc="herbstclient"
