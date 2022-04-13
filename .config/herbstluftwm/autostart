@@ -40,7 +40,7 @@ hc keybind $Mod-n           spawn spotifyctl next
 # Spawn apps
 hc keybind $Mod-Return  spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with alacritty as fallback
 hc keybind $Mod-Shift-a spawn pavucontrol
-hc keybind $Mod-Shift-b spawn firefox
+hc keybind $Mod-Shift-b spawn brave
 hc keybind $Mod-Shift-d spawn discord
 hc keybind $Mod-Shift-e spawn godot
 hc keybind $Mod-Shift-g spawn steam
