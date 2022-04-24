@@ -4,6 +4,6 @@
     "prettier.printWidth": 100,
     "prettier.tabWidth": 4,
     "prettier.endOfLine": "lf",
-    "latex.build.onSave": true,
-    "python.formatting.provider": "black",
+    "texlab.build.onSave": true,
+    "python.formatting.provider": "black"
 }
