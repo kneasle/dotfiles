@@ -20,5 +20,6 @@
 	tip = log --oneline --decorate --all --graph -n 10
 	cam = commit --amend
 	cm = commit -m
+	prune = remote prune origin
 [init]
 	defaultBranch = master
