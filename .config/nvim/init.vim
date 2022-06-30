@@ -1,7 +1,5 @@
-" Map 'jl' to '\' for when typing latex
-inoremap jl \
+" ========== GENERAL CONFIG ==========
 
-let mapleader = " "
 set showcmd
 
 " Formatting definitions: always use 4 spaces as indentation
@@ -13,7 +11,7 @@ set expandtab
 " Show (absolute) line numbers, but disable the sign column so it doesn't move my text left and
 " right all the time
 set number
-set signcolumn=no
+set signcolumn=yes
 
 " Break lines automatically at 100 chars
 set linebreak
@@ -28,49 +26,13 @@ set nocompatible
 " Don't highlight everything after I use search to jump around
 set nohlsearch
 
-" ==== AndrewRadev plugins ====
-nnoremap <silent> <c-h> :SidewaysLeft<cr>
-nnoremap <silent> <c-l> :SidewaysRight<cr>
-nnoremap <silent> <c-k> :SidewaysJumpLeft<cr>
-nnoremap <silent> <c-j> :SidewaysJumpRight<cr>
+" ==== KEYS ====
 
-" ==== CoC ====
-" Goto
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+let mapleader = " "
+" Map 'jl' to '\' for when typing latex
+inoremap jl \
 
-" Renaming
-nmap <leader>rn <Plug>(coc-rename)
 
-" Formatting
-nmap <leader>f  <Plug>(coc-format)
-
-" Code actions
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Move between diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-command! -nargs=0 Format :call CocAction('format')
-
-" Packages
-
-let g:plug_url_format = "https://github.com/%s.git"
-
-call plug#begin('~/.config/nvim/plugged')
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'AndrewRadev/sideways.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'wellle/context.vim'
-
-call plug#end()
-
-filetype plugin indent on
 
 " ======== COLOURS ========
 
@@ -82,6 +44,82 @@ set termguicolors
 " Dropdown menu should be dark grey, with a cyan highlight over the selected element
 hi Pmenu ctermbg=DarkGrey ctermfg=White guibg=#555555 guifg=#ffffff
 hi PmenuSel ctermbg=LightBlue ctermfg=Black cterm=italic guibg=#00ccff guifg=#000000 gui=italic 
+
+" To make the coc-hints easy to spot without using the sign column set the line numbers to be
+" darkish steely grey
+hi LineNr ctermfg=grey ctermbg=NONE cterm=NONE guifg=#666699 gui=NONE guibg=NONE
+
+" Folded lines are italic, lime on dark grey
+hi Folded guifg=#00ff00 guibg=#444444 gui=italic
+
+" Transparent background
+hi Normal ctermbg=None guibg=None
+hi NonText ctermfg=None guibg=None
+hi SignColumn ctermfg=None guibg=None
+
+
+
+" ========== PLUGINS ==========
+
+let g:plug_url_format = "https://github.com/%s.git"
+
+call plug#begin('~/.config/nvim/plugged')
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " LSP support
+Plug 'AndrewRadev/sideways.vim'                 " swapping list elements
+Plug 'sheerun/vim-polyglot'                     " good syntax highlighting
+Plug 'wellle/context.vim'                       " show context above buffer
+Plug 'norcalli/nvim-colorizer.lua'              " highlight hex values with that colour
+Plug 'machakann/vim-highlightedyank'            " highlight yanked text
+Plug 'tpope/vim-commentary'                     " comment/uncomment with `gc`
+Plug 'easymotion/vim-easymotion'                " very very fast movement
+
+Plug 'airblade/vim-gitgutter'                   " git diffs in sign column
+Plug 'junegunn/vim-easy-align'                  " easily align things
+" Plug 'liuchengxu/vim-which-key'                 " :WhichKey to see available keys
+" Plug 'itchyny/lightlime.vim'                    " :WhichKey to see available keys
+" Plug 'SirVer/ultisnips'                         " snippet completion
+
+call plug#end()
+
+filetype plugin indent on
+" setup `nvim-colourizer` (**after** setting `termguicolors`)
+lua require 'colorizer'.setup()
+
+
+
+" ========== PLUGIN CONFIG ==========
+
+" sideways
+nnoremap <silent> <c-h> :SidewaysLeft<cr>
+nnoremap <silent> <c-l> :SidewaysRight<cr>
+nnoremap <silent> <c-k> :SidewaysJumpLeft<cr>
+nnoremap <silent> <c-j> :SidewaysJumpRight<cr>
+
+" alignment
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+" easy motion
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" highlighted yank
+let g:highlightedyank_highlight_duration = -1   " persist yank highlight until I type
+hi HighlightedyankRegion ctermbg=DarkGrey guibg=#444444
+
+" git-gutter
+set updatetime=100
+let g:gitgutter_sign_modified = '| '
+let g:gitgutter_sign_added = '| '
+let g:gitgutter_sign_modified_removed = '|_'
+hi GitGutterAdd          ctermfg=Green  ctermbg=None guifg=#009900 guibg=None gui=bold
+hi GitGutterChange       ctermfg=Yellow ctermbg=None guifg=#ffff00 guibg=None gui=bold
+hi GitGutterChangeDelete ctermfg=Yellow ctermbg=None guifg=#ff7700 guibg=None gui=bold
+hi GitGutterDelete       ctermfg=Red    ctermbg=None guifg=#ff0000 guibg=None gui=bold
+
+" ==== CoC ====
 
 " Hints should be light blue, info should be green, warnings yellow and errors red
 hi CocHintFloat ctermfg=LightBlue cterm=bold guifg=#00ccff gui=bold
@@ -96,13 +134,21 @@ hi CocWarningSign ctermfg=Yellow cterm=italic,bold guifg=#ffff00 gui=italic,bold
 hi CocErrorFloat ctermfg=Red cterm=bold guifg=#ff0000 gui=bold
 hi CocErrorSign ctermfg=Red cterm=italic,bold guifg=#ff0000 gui=italic,bold
 
-" To make the coc-hints easy to spot without using the sign column set the line numbers to be
-" darkish steely grey
-hi LineNr ctermfg=grey ctermbg=NONE cterm=NONE guifg=#666699 gui=NONE guibg=NONE
+" Goto
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
-" Folded lines are italic, lime on dark grey
-hi Folded guifg=#00ff00 guibg=#444444 gui=italic
+" Renaming
+nmap <leader>rn <Plug>(coc-rename)
 
-" Force transparent background
-hi Normal ctermbg=None guibg=None
-hi NonText ctermfg=None guibg=None
+" Code actions
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Move between diagnostics
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+command! -nargs=0 Format :call CocAction('format')
