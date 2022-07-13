@@ -21,5 +21,6 @@
 	amd = commit --amend --no-edit
 	cm = commit -m
 	prune = remote prune origin
+	cam = commit -a -m
 [init]
 	defaultBranch = master
