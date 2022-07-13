@@ -18,7 +18,7 @@
     unstage = reset HEAD --
     push-new = push -u origin HEAD
 	tip = log --oneline --decorate --all --graph -n 10
-	cam = commit --amend --no-edit
+	amd = commit --amend --no-edit
 	cm = commit -m
 	prune = remote prune origin
 [init]
