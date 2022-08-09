@@ -122,6 +122,10 @@ hi GitGutterDelete       ctermfg=Red    ctermbg=None guifg=#ff0000 guibg=None gu
 
 " ==== CoC ====
 
+" Don't warn me that neovim isn't up-to-date.  I'm stuck with the Ubuntu's version until I can
+" switch back to Arch Linux
+let g:coc_disable_startup_warning = 1
+
 " Hints should be light blue, info should be green, warnings yellow and errors red
 hi CocHintFloat ctermfg=LightBlue cterm=bold guifg=#00ccff gui=bold
 hi CocHintSign ctermfg=LightBlue cterm=italic guifg=#55aacc gui=italic
@@ -147,6 +151,9 @@ nmap <leader>rn <Plug>(coc-rename)
 " Code actions
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Completion menu
+inoremap <silent><expr> <c-f> coc#_select_confirm()
 
 " Move between diagnostics
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
