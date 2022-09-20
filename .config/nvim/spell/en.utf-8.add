@@ -20,6 +20,8 @@ DirectX
 FPs
 Fira
 Firefox's
+Flecky
+Flecky's
 GIMP's
 GLSL
 GPGPU
@@ -31,6 +33,7 @@ Garamond
 GeForce
 Grandsire
 IRs
+Imagic
 Iterable
 JSON
 Jadd
@@ -65,6 +68,7 @@ TOML
 UI
 UML
 URLs
+UTF
 UVs
 UX
 Ubuntu
@@ -103,6 +107,7 @@ cru
 crus
 ctrl
 d
+derpy
 deserialisation
 desktop's
 diffs
@@ -114,6 +119,7 @@ f
 f32
 fn
 g
+github
 h
 handbell
 handbells
@@ -124,6 +130,7 @@ iOS
 iff
 impl
 init
+inline
 inlined
 inv
 io
@@ -131,6 +138,7 @@ j
 jank
 json
 k
+kneasle
 l
 len
 lh
@@ -171,10 +179,12 @@ structs
 t
 ths
 toml
+treble's
 u
 u32
 u8
 unboxed
+unitless
 unringable
 username
 usernames
