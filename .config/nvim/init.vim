@@ -75,6 +75,7 @@ Plug 'tpope/vim-commentary'                     " comment/uncomment with `gc`
 Plug 'easymotion/vim-easymotion'                " very very fast movement
 Plug 'airblade/vim-gitgutter'                   " git diffs in sign column
 Plug 'jiangmiao/auto-pairs'                     " VSCode-style automatic bracketing
+Plug 'tpope/vim-surround'                       " Easily add/remove brackets/quotes/etc.
 
 Plug 'junegunn/vim-easy-align'                  " easily align things
 " Plug 'liuchengxu/vim-which-key'                 " :WhichKey to see available keys
