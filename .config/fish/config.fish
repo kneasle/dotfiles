@@ -1,5 +1,6 @@
 set PATH ~/bin/node-v12.18.2-linux-x64/bin ~/complib-build /usr/lib/dart/bin ~/bin/dart-sass $PATH
 set PATH ~/.local/bin/ $PATH
+set PATH ~/.cargo/bin/ $PATH
 
 set RUSTFLAGS "-C target-cpu=native"
 
