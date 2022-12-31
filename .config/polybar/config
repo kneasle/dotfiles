@@ -147,6 +147,12 @@ label-muted = muted
 label-muted-foreground = #666
 
 
+[module/battery]
+type = internal/battery
+label-charging = %percentage%%+
+label-discharging = %percentage%%
+
+
 [module/ip]
 type = internal/network
 interface = enp42s0
