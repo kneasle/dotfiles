@@ -1,26 +1,23 @@
 #!/usr/bin/env bash
 
-# this is a simple config for herbstluftwm
-
 hc() {
     herbstclient "$@"
 }
-
-# Spawn polybar
-killall polybar
-hc spawn polybar header
 
 hc emit_hook reload
 
 xsetroot -solid '#5A8E3A'
 
+
+
+###############
+# KEYBINDINGS #
+###############
+
+Mod=Mod4   # Use the super key as the main modifier
+
 # remove all existing keybindings
 hc keyunbind --all
-
-# keybindings
-# if you have a super key you will be much happier with Mod set to Mod4
-#Mod=Mod1    # Use alt as the main modifier
-Mod=Mod4   # Use the super key as the main modifier
 
 hc keybind $Mod-Shift-c close
 hc keybind $Mod-Shift-q quit
@@ -37,6 +34,13 @@ hc keybind $Mod-space       spawn spotifyctl playpause
 hc keybind $Mod-p           spawn spotifyctl previous
 hc keybind $Mod-n           spawn spotifyctl next
 
+# Screenshot utils
+SS=$HOME/documents/pictures/screenshots/misc
+mkdir -p $SS
+hc keybind Print        spawn scrot $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
+hc keybind $Mod-Print   spawn scrot --focused $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
+hc keybind Shift-Print  spawn scrot --select $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
+
 # Spawn apps
 hc keybind $Mod-Return  spawn "${TERMINAL:-alacritty}" # use your $TERMINAL with alacritty as fallback
 hc keybind $Mod-Shift-a spawn pavucontrol
@@ -50,13 +54,6 @@ hc keybind $Mod-Shift-o spawn obs
 hc keybind $Mod-Shift-s spawn spotify
 hc keybind $Mod-Shift-t spawn teams
 hc keybind $Mod-Shift-v spawn vivaldi-stable
-
-# Screenshot utils
-SS=$HOME/documents/pictures/screenshots/misc
-mkdir -p $SS
-hc keybind Print        spawn scrot $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
-hc keybind $Mod-Print   spawn scrot --focused $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
-hc keybind Shift-Print  spawn scrot --select $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
 
 # basic movement in tiling and floating mode
 # focusing clients
@@ -217,4 +214,7 @@ for monitor in $(hc list_monitors | cut -d: -f1) ; do
     "$panel" "$monitor" &
 done
 
+# Spawn extra programs
+killall polybar
+hc spawn polybar header
 nitrogen --set-zoom-fill ~/documents/desktop.jpg
