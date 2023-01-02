@@ -34,6 +34,10 @@ hc keybind $Mod-space       spawn spotifyctl playpause
 hc keybind $Mod-p           spawn spotifyctl previous
 hc keybind $Mod-n           spawn spotifyctl next
 
+# Screen brightness
+hc keybind $Mod-Control-minus    spawn brightnessctl set 10%-
+hc keybind $Mod-Control-equal    spawn brightnessctl set 10%+
+
 # Screenshot utils
 SS=$HOME/documents/pictures/screenshots/misc
 mkdir -p $SS
