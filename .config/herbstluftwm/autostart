@@ -218,6 +218,14 @@ for monitor in $(hc list_monitors | cut -d: -f1) ; do
     "$panel" "$monitor" &
 done
 
+
+
+# Trackpad config
+xinput set-prop bcm5974 303 1 # Tap to click
+xinput set-prop bcm5974 311 1 # Natural scroll direction
+
+
+
 # Spawn extra programs
 killall polybar
 hc spawn polybar header
