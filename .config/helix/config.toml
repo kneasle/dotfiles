@@ -1,5 +1,6 @@
 [editor]
 cursorline = true
+true-color = true
 idle-timeout = 0
 completion-trigger-len = 1
 cursor-shape.insert = "bar"
