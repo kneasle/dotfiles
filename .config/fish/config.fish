@@ -31,4 +31,6 @@ alias copy="xclip -selection c"
 alias hc="herbstclient"
 
 # Load environment vars for project directories
-source ~/documents/dirs.fish
+if test -e ~/.per-device-config.fish
+    source ~/.per-device-config.fish
+end
