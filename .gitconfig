@@ -14,7 +14,7 @@
     co = checkout
     gr = log --oneline --decorate --all --graph
     push-new = push -u origin HEAD
-    tip = log --oneline --decorate --all --graph -n 10
+    tip = log --oneline --decorate --all --graph -n 20
     amd = commit --amend --no-edit
     cm = commit -m
     cam = commit -a -m
