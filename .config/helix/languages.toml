@@ -1,17 +1,9 @@
 [[language]]
 name = "javascript"
 auto-format = true
-formatter = { command = 'prettier', args = [
-  "--parser", "typescript",
-  "--options-line-width", "100",
-  "--config-precedence", "file-override", # Let these prefs be overridden by project-specific config files
-] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "js", "--options-line-width", "100"] }
 
 [[language]]
 name = "typescript"
 auto-format = true
-formatter = { command = 'prettier', args = [
-  "--parser", "typescript",
-  "--options-line-width", "100",
-  "--config-precedence", "file-override", # Let these prefs be overridden by project-specific config files
-] }
+formatter = { command = 'deno', args = ["fmt", "-", "--ext", "ts", "--options-line-width", "100"] }
