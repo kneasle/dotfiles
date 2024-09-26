@@ -1,0 +1,13 @@
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
+
+[font]
+size = 10.0
+normal.family = "Fira Code"
+
+[shell]
+program = "/usr/bin/fish"
+
+[window]
+dynamic_padding = true
+opacity = 0.95
+padding = { x = 5, y = 5 }
