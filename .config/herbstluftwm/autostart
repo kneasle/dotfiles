@@ -39,7 +39,7 @@ hc keybind $Mod-Control-minus    spawn brightnessctl set 10%-
 hc keybind $Mod-Control-equal    spawn brightnessctl set 10%+
 
 # Screenshot utils
-SS=$HOME/documents/pictures/screenshots/misc
+SS=$HOME/Documents/Pictures/Screenshots/Misc
 mkdir -p $SS
 hc keybind Print        spawn scrot $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
 hc keybind $Mod-Print   spawn scrot --focused $SS/%Y-%m-%d_%H-%M-%S_\$wx\$h.png
