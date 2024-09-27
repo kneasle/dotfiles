@@ -27,5 +27,8 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 . "$HOME/.cargo/env"
 
-# Keyboard layout commands
+# Set custom keyboard layout
 ./.keyboard
+
+# Start insync's daemon, if it hasn't been started already
+insync start
